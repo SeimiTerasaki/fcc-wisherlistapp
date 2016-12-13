@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+    
+<%- include('partials/head') %>
+
+<body>
+<%- include('partials/navbar') %>
+
+  <% userData.forEach((Data)=>{ %>
+  <% var Boards = Data.boards.length %>
+  
+<header class="title">
+  <img src="<%= Data.avatar %>" id="header-avatar" />
+  <p id="header-user"><%= Data.username %><p>
+  <p id="header-info">"All I want for Christmas is you"</p>
+  <p id="header-info">Boards: <%=Boards%></p>
+</header>
+
+<div class="grid">
+  <div class="grid-sizer"></div>
+
+  <% for(var i=0; i < Boards; i++) { %>
+  <div class="grid-item">
+    <div class="img-wrapper">
+     <button class="trash-btn"><i class="fa fa-times" aria-hidden="true" id="trash"></i></button>
+     <img src="<%= Data.boards[i].image %>" class="img"/>
+     <div class="caption">
+       
+      <% var likeNum %>
+       <% var shareNum %>
+       <%if(Data.boards[i].likes == 0){ %>
+         <% likeNum = " " %>
+        <% } else { %>
+        <% likeNum = Data.boards[i].likes %>
+        <% } %>
+        <%if(Data.boards[i].shares == 0){ %>
+         <% shareNum = " " %>
+        <% } else { %>
+        <% shareNum = Data.boards[i].likes %>
+        <% } %>
+       
+      <span class="badge"><i class="fa fa-retweet" aria-hidden="true"></i><span class="like"> <%= shareNum %></span></span>
+      <span class="badge"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="like"> <%= likeNum %></span></span>
+      <p class="caption-p"><%= Data.boards[i].title %></p>
+     </div>
+     <div class="row">
+      <img src="<%= Data.avatar %>" class="grid-avatar" />
+      <p class="username"><%=Data.username%></p>
+    </div>
+  </div>
+ </div>
+ <% } %>
+<% }) %>
+
+<%- include('partials/addboard') %>
+
+<%- include('partials/setting') %>
+
+</div>
+</body>
+</html>

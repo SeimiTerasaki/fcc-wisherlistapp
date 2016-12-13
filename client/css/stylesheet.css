@@ -1,0 +1,476 @@
+@import url('https://fonts.googleapis.com/css?family=Niconne');
+
+@import url('https://fonts.googleapis.com/css?family=Questrial');
+
+* { box-sizing: border-box; }
+
+/* force scrollbar */
+html{ overflow-y: scroll; }
+
+body{
+  font-family: sans-serif;
+}
+
+.header{
+  margin-top:5%;
+}
+
+.badge{
+  margin: 0 2px;
+}
+
+/* ---- isotope ---- */
+
+.grid{
+  
+}
+
+/* clear fix */
+.grid:after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* ---- .grid-item ---- */
+
+.grid-sizer,
+.grid-item{
+  width: 25%;
+  margin: 10px;
+}
+
+.grid-item{
+  float: left;
+  padding: 10px;
+}
+
+.grid-item .img{
+  display: block;
+  max-width: 100%;
+  border-radius: 5%;
+}
+
+.trash-btn{
+  float: right;
+  background-color: transparent;
+  border: none;
+}
+
+.title{
+  padding-top: 70px;
+  font-family: 'Niconne';
+}
+
+.description{
+  font-family: 'Niconne';
+  font-size: 1.7em;
+}
+
+p{
+  font-size: 1em;
+}
+
+.like-btn, .share-btn{
+  text-decoration: none;
+  border: none;
+  color:#fff;
+  float: right;
+  margin:0 2px;
+  background-color: #777;
+  border-radius: 40%;
+}
+
+.img-wrapper{
+  padding-bottom: 10px;
+}
+
+.img-wrapper .caption{
+  background-color:#fff;
+  padding: 5px 9px 0px 9px;
+}
+
+.badge{
+  float: right;
+}
+
+.user-info{
+  background-color:#fff;
+}
+
+.row{
+  width: 90%;
+  margin: auto;
+}
+
+.grid-avatar{
+  padding: 0px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  float: left;
+  margin: 0 5px 0 0;
+}
+
+.username{
+  position: relative;
+  display: inline-block;
+}
+
+.user-name{
+  margin: 0px;
+  text-align: left;
+}
+/***Navbar***/
+
+.nav>li>a {
+  padding: 15px 10px;
+}
+
+.navbar-brand{
+  font-size: 1.6em;
+  font-family: 'Niconne';
+}
+
+#nav-avatar{
+  width: 30px;
+  display: inline-block;
+}
+
+#a-avatar{
+  padding: 0 5px 0 0;
+  margin-top: 15px;
+}
+
+#user-link{
+  padding-left: 5px;
+}
+
+#username-nav{
+  color: #fff;
+  background-color: transparent;
+}
+
+/****Sign In ****/
+#logbox {
+  padding: 20px 30px;
+  margin: 50px auto;
+  width: 500px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+#signup-heading {
+  text-align: center;
+  font-family: 'Sorts Mill Goudy';
+  color: #757575;
+  font-weight: 300;
+}
+
+#email, #password{
+  font-family: "Sofia", Helvetica, sans-serif;
+}
+
+.input {
+  width: 75%;
+  height: 50px;
+  display: block;
+  margin: 0 auto 15px;
+  padding: 0 15px;
+  border: none;
+  border-bottom: 2px solid #ebebeb;
+}
+.input:focus {
+  outline: none;
+  border-bottom-color: #3CC !important;
+}
+.input:hover {
+  border-bottom-color: #dcdcdc;
+}
+.input:invalid {
+  box-shadow: none;
+}
+
+.pass:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 1000px white inset;
+}
+
+.inputButton{
+  position: relative;
+  width: 85%;
+  height: 40px;
+  display: block;
+  margin: 15px auto 0 auto; 
+  color: white;
+  background-color: #777;
+  border: none;
+  font-family: "Sofia", Helvetica, sans-serif;
+}
+
+.btn-block {
+   margin-top: 0px;
+}
+
+.btn-container{
+  margin: auto;
+}
+
+.rounded {
+    border-radius: 4px !important;
+}
+.btn {
+    box-shadow: none;
+}
+
+.btn:hover{
+  transition: all 0.3s ease-in-out;
+}
+
+.btn:focus{
+    color: #333;
+    text-decoration: none;
+}
+
+.btn-facebook-inversed {
+    background-color: #4863ae;
+    border-color: #4863ae;
+    color: #fff;
+    width: 40%;
+  display: inline-block;
+  margin-right: 3px;
+}
+
+.btn-facebook-inversed:hover {
+    background-color: transparent;
+    color: #4863ae;
+}
+
+.btn-github-inversed {
+    background-color: #333;
+    border-color: #333;
+    color: #fff;
+  width: 40%;
+  display: inline-block;
+  margin-left: 3px;
+}
+
+.btn-github-inversed:hover {
+    background-color: transparent;
+    color: #333;
+}
+
+#icon{
+  color: #fff;
+}
+
+#icon:hover{
+  color: #333;
+}
+
+#here{
+  color: #337ab7;
+}
+
+#here:hover{
+  text-decoration: underline;
+}
+
+/*** Addboard ***/
+
+#logbox {
+  padding: 20px 30px;
+  margin: 50px auto;
+  width: 500px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+}
+
+#add-a{
+  font-family:'Questrial';
+}
+
+#thumbnail-img{
+  position: relative;
+  width: 100%;
+  max-height: 100%;
+}
+
+.image-preview{
+  height: 250px;
+  width: 400px;
+  margin:20px auto 0 auto;
+  object-fit:contain;
+}
+
+.well{
+  padding: 0px;
+}
+
+#container-uploader{
+  margin-bottom: 20px auto;
+}
+
+.input-class{
+  margin: 20px auto auto auto;
+}
+
+.label-source{
+  margin-right: 55%;
+}
+
+.label-title{
+  margin-right: 70%;
+}
+
+.input-class > p{
+  font-family: 'Questrial';
+  font-weight: 600;
+}
+
+#input-add{
+  height: 50%;
+}
+
+.formInput{
+    display: block;
+    margin: 8px auto 15px;
+    padding: 0 15px;
+    border: 1px solid black;
+    width: 80%;
+   background-color: rgba(255,255,255,.8);
+    color:#333;
+    transition: background-color 0.5s ease;
+  }
+
+.formAdd{
+  color:#fff;
+  margin: 10px 5px 0 5px;
+  font-size: 12px;
+}
+
+#upload-btn, #cancel, #updateProfile-btn, #updateProfile-cancel{
+  font-family: 'Questrial';
+  font-weight: 600;
+}
+
+#upload-btn, #updateProfile-btn{
+  background-color: #3c763d;
+  transition: background-color 0.5s ease;
+  color: #fff;
+}
+
+#upload-btn:hover,
+#updateProfile-btn:hover{
+  background-color: #132f0c;
+}
+
+#cancel,#updateProfile-cancel{
+  background-color:#d43f3a;
+  transition: background-color 0.5s ease;
+}
+
+#cancel:hover,
+#updateProfile-cancel:hover{
+  background-color:	#bd0505;
+  color:#fff;
+}
+
+/***Header***/
+
+header{
+  margin-bottom: 2%;
+  padding: 0px 0px 30px 10%;
+  background-color: #eee;
+}
+
+#header-avatar{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  display: inline-block;
+  float: left;
+  margin: 0 10px 0 0;
+}
+
+#header-user{
+  font-size: 25px;
+}
+
+#header-info{
+   font-size: 18px;
+}
+
+#header-user, #header-info{
+  margin-bottom: -2px;
+}
+
+/***Setting***/
+
+*::-webkit-input-placeholder {
+  color: #333;
+}
+
+.img-responsive{
+  width: 150px;
+  height: 150px;
+}
+
+.profile-userpic img {
+  float: none;
+  margin: 10px auto;
+  -webkit-border-radius: 50% !important;
+  -moz-border-radius: 50% !important;
+  border-radius: 50% !important;
+}
+
+.profile-username {
+  margin-top: 15px;
+  color: #5a7391;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 7px;
+}
+
+.col-sm-12{
+  padding: 0px;
+  margin: auto;
+}
+.pass {
+  width: 35%;
+  height: 30px;
+  display: inline-block;
+  border: none;
+  border-bottom: 2px solid #3CC !important;
+  background-color: transparent;
+  color: #777 !important;
+  margin: -4px 5px 10px 5px;
+  padding: 0px;
+}
+
+.pass:active,
+.pass:focus,
+.pass:visited {
+  border-bottom: 2px solid #3CC !important;
+  border: 0px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.control-label {
+  float: left;
+}
+
+.profile-usermenu ul li{
+  padding: 10px;
+}
+
+.profile-usermenu ul li:hover {
+  background-color: #fafcfd;
+  color: #5b9bd1;
+}

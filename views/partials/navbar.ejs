@@ -1,0 +1,38 @@
+    <!-- Fixed navbar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><i class="fa fa-gift" aria-hidden="true"></i> Wishlist</a>
+        </div>
+        <div id="navbar" class="navbar-collapse collapse">
+          
+         <% if(typeof userID ==='undefined'){ %>
+         <ul class="nav navbar-nav navbar-right">
+          <li class="nav-link"><a href="#">Home</a></li>
+          <li class="nav-link"><a class="menu" href="#sign-in" data-toggle="modal">Sign In</a></li>
+          <li class="nav-link"><a class="menu" href="#register" data-toggle="modal">Register</a></li>
+         </ul>
+         <% } else { %>
+         <ul class="nav navbar-nav">
+          <li class="nav-link"><a class="menu" href="/home">All Boards</a></li>
+         </ul>
+         <ul class="nav navbar-nav navbar-right">
+          <li class="nav-link"><a href="/myboards" class="menu" id="a-avatar">
+            <img src="<%= userAva %>" id="nav-avatar"/> <%= userID %></a>
+          </li>
+          <li class="nav-link"><a class="menu" href="#add-board" data-toggle="modal">Add Board</a></li>
+          <li class="nav-link"><a class="menu" href="/logout">Logout</a></li>
+          <li class="nav-link"><a class="menu" href="#setting" data-toggle="modal"><i class="fa fa-cog" aria-hidden="true"></i></a></li>
+         </ul>
+         <% } %>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    
+    

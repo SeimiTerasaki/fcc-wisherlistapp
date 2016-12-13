@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <%- include('partials/head') %>
+
+<body>
+<%- include('partials/navbar') %>
+
+<% if(typeof userID ==='undefined'){ %>
+<h1 class="title text-center"><i class="fa fa-gift" aria-hidden="true"></i> Wishlist</h1>
+<p class="description text-center">A comprehensive board of what you want for those who don't know yet</p>
+<% } else {%>
+<div class="header"></div>
+
+<%- include('partials/setting') %>
+<% } %>
+
+<div class="grid">
+  <div class="grid-sizer"></div>
+  
+  <% data.forEach((Data)=>{ %>
+  <% var Boards = Data.boards.length %>
+  <% for(var i=0; i < Boards; i++) { %>
+  <div class="grid-item">
+    <div class="img-wrapper">
+     <img src="<%= Data.boards[i].image %>" class="img"/>
+     <div class="caption">
+       
+       <% var likeNum %>
+       <% var shareNum %>
+       <%if(Data.boards[i].likes == 0){ %>
+         <% likeNum = " " %>
+        <% } else { %>
+        <% likeNum = Data.boards[i].likes %>
+        <% } %>
+        <%if(Data.boards[i].shares == 0){ %>
+         <% shareNum = " " %>
+        <% } else { %>
+        <% shareNum = Data.boards[i].likes %>
+        <% } %>
+       
+       
+      <% if(typeof userID ==='undefined'){ %>
+         <span class="badge"><i class="fa fa-retweet" aria-hidden="true"></i><span class="like"> <%= shareNum %></span></span>
+         <span class="badge"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="like"> <%= likeNum %></span></span>
+      <% } else {%>
+         <button class="share-btn"><i class="fa fa-retweet" aria-hidden="true"></i><span class="like"> <%= shareNum %></span></button>
+         <button class="like-btn"><i class="fa fa-thumbs-up" aria-hidden="true"></i><span class="like"> <%= likeNum %></span></button>
+     <% } %>
+     
+     <p class="caption-p"><%= Data.boards[i].title %></p>
+     </div>
+    <div class="row">
+        <img src="<%= Data.avatar %>" class="grid-avatar" />
+      <p class="username"><%=Data.username%></p>
+    </div>
+  </div>
+ </div>
+ <% } %>
+<% }) %>
+
+</div>
+
+<%- include('partials/signin') %>
+
+<%- include('partials/register') %>
+
+<%- include('partials/addboard') %>
+
+</body>
+</html>

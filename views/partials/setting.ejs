@@ -1,0 +1,25 @@
+
+<% userData.forEach((Data)=>{ %>
+
+<!--Setting-->
+  <div id="setting" role="dialog" class="modal fade">
+    <div class="modal-content text-center" div id="logbox">
+      <button type="button" class="close" data-dismiss="modal">&times;</button>
+      <div class="profile-userpic">
+        <img src="<%= Data.avatar %>" class="img-responsive" id="setting-avatar">
+      </div>
+      <div class="profile-username"><%= Data.username %></div>
+      <div class="profile-usermenu">
+        <ul class="nav">
+          <li class="profile-li">Email: <span class="profile-input"><%= Data.email %><span></li>
+          <li class="profile-li">Password: <span class="profile-input"><%= Data.password %><span></li>
+          <li class="profile-li">Avatar: <span class="profile-avatar"><%= Data.avatar %></span></li>
+        </ul>
+      </div>
+       <button class="btn formAdd" id="updateProfile-btn">UPDATE</button>
+       <button class="btn formAdd" id="updateProfile-cancel">CANCEL</button>
+    </div>
+  </div>
+    </div>
+
+<% }) %>
